@@ -2,12 +2,12 @@
 
 ## Deployment
 
-The web game is deployed at <YOUR DEPLOYED GITHUB.IO URL GOES HERE>.
+The web game is deployed at https://jonscodes.github.io/Slot-Machine-Game.
 
 
 ## Project Description
 
-Slot Machine Game
+Slot Machine Game, users will be able to play a single player slot machine game.
 
 ## Game Logic
 
