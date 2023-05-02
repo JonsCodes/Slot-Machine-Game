@@ -1,9 +1,8 @@
-# Slot-Machine-Game
+# Slot Machine Game
 
 ## Deployment
 
 The web game is deployed at https://jonscodes.github.io/Slot-Machine-Game.
-
 
 ## Project Description
 
