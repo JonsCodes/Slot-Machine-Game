@@ -35,3 +35,6 @@ If they select restart it will, restart the game.
 | Thur. 5/04 | Test game and fix issues   |
 | Fri. 5/05 |  Test Game    |
 | Sat. 5/05 | Deploy to GitHub Pages. Submit completed project. Project presentations. |
+
+## Source
+- Audio Source: https://mixkit.co/free-sound-effects/slot-machine/
