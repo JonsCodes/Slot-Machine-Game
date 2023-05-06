@@ -5,22 +5,41 @@ let coins = 100;
 const slot1 = document.getElementById('slot1');
 const slot2 = document.getElementById('slot2');
 const slot3 = document.getElementById('slot3');
+const spinButton = document.getElementById('spin-button');
+const coinCount = document.getElementById('coin-count');
 
-const spinButton = document.getElementById("spin-button");
-spinButton.addEventListener("click", spin);
+coinCount.innerHTML = `Coins: ${coins}`;
 
 function spin() {
-    const result1 = Math.floor(Math.random() * symbol.length);
-    const result2 = Math.floor(Math.random() * symbol.length);
-    const result3 = Math.floor(Math.random() * symbol.length);
-
-    slot1.textContent = symbol[result1];
-    slot2.textContent = symbol[result2];
-    slot3.textContent = symbol[result3];
-
-    if (result1 === result2 && result2 === result3) {
-        alert('Congratulations! You Won!')
+  if (coins === 0) {
+    const restart = confirm('You ran out of coins! Restart the game?');
+    if (restart) {
+      coins = 100;
+      coinCount.innerHTML = `Coins: ${coins}`;
     } else {
-        alert('Sorry, try again!')
+      return;
     }
+  }
+
+  coins--;
+  coinCount.innerHTML = `Coins: ${coins}`;
+
+  const slot1Value = slotValues[Math.floor(Math.random() * slotValues.length)];
+  const slot2Value = slotValues[Math.floor(Math.random() * slotValues.length)];
+  const slot3Value = slotValues[Math.floor(Math.random() * slotValues.length)];
+
+  slot1.classList.remove(slot1.classList[1]);
+  slot1.classList.add(slot1Value);
+  slot2.classList.remove(slot2.classList[1]);
+  slot2.classList.add(slot2Value);
+  slot3.classList.remove(slot3.classList[1]);
+  slot3.classList.add(slot3Value);
+
+  if (slot1Value === slot2Value && slot2Value === slot3Value) {
+    coins += 10;
+    coinCount.innerHTML = `Coins: ${coins}`;
+    alert(`Congratulations! You won 10 coins!`);
+  }
 }
+
+spinButton.addEventListener('click', spin);
