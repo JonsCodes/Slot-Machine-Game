@@ -8,16 +8,24 @@ const images = [
 ]
 
 // Define the audio clips for the slot machine
-
+const audio = {
+  spin:
+  win:
+  lose:
+}
 // Set the inital number of coins
+let coins = 100;
 
 // Get the elemtns for the slot machine
+const reels = document.quesrySelectorAll('.reel');
+const spinButton = document.getElementById('spin-button');
+const coinCount = document.getElementById("coin-count");
 
 // Define the function for spin
-
-// Play the spin sound
-
-// Disable the spin button
+function spin() {
+  // Play the spin sound
+  audio.spin.play();
+  // Disable the spin button
 
 // Decrement the number of coins
 
@@ -25,6 +33,7 @@ const images = [
 
 // Generate random values for each reel
 
+}
 // Animate Reel
 
 // Define the function to animate reels
@@ -42,3 +51,4 @@ const images = [
 // Initialize the coint count displau
 
 // Add event listener to the spin button
+spinButton.addEventListener("click, spin")
