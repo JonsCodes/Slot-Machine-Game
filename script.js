@@ -1,45 +1,44 @@
-const slotValues = ['cherry', 'lemon', 'orange', 'plum', 'bell', 'bar', 'seven'];
+// Define the images for the slot machine
+const images = [
+  ".assets/cherries.png",
+  ".assets/clover.png",
+  ".assets/lemon.png",
+  ".assets/melon.png",
+  ".assets/bell.png"
+]
 
-let coins = 100;
+// Define the audio clips for the slot machine
 
-const slot1 = document.getElementById('slot1');
-const slot2 = document.getElementById('slot2');
-const slot3 = document.getElementById('slot3');
-const spinButton = document.getElementById('spin-button');
-const coinCount = document.getElementById('coin-count');
+// Set the inital number of coins
 
-coinCount.innerHTML = `Coins: ${coins}`;
+// Get the elemtns for the slot machine
 
-function spin() {
-  if (coins === 0) {
-    const restart = confirm('You ran out of coins! Restart the game?');
-    if (restart) {
-      coins = 100;
-      coinCount.innerHTML = `Coins: ${coins}`;
-    } else {
-      return;
-    }
-  }
+// Define the function for spin
 
-  coins--;
-  coinCount.innerHTML = `Coins: ${coins}`;
+// Play the spin sound
 
-  const slot1Value = slotValues[Math.floor(Math.random() * slotValues.length)];
-  const slot2Value = slotValues[Math.floor(Math.random() * slotValues.length)];
-  const slot3Value = slotValues[Math.floor(Math.random() * slotValues.length)];
+// Disable the spin button
 
-  slot1.classList.remove(slot1.classList[1]);
-  slot1.classList.add(slot1Value);
-  slot2.classList.remove(slot2.classList[1]);
-  slot2.classList.add(slot2Value);
-  slot3.classList.remove(slot3.classList[1]);
-  slot3.classList.add(slot3Value);
+// Decrement the number of coins
 
-  if (slot1Value === slot2Value && slot2Value === slot3Value) {
-    coins += 10;
-    coinCount.innerHTML = `Coins: ${coins}`;
-    alert(`Congratulations! You won 10 coins!`);
-  }
-}
+// Update the coin count display
 
-spinButton.addEventListener('click', spin);
+// Generate random values for each reel
+
+// Animate Reel
+
+// Define the function to animate reels
+
+// set the Inital position of each reel
+
+// Define the target position for the reels
+
+// Animate each reel to the target position
+
+// Define the function to check win condition
+
+// Enable Spin button
+
+// Initialize the coint count displau
+
+// Add event listener to the spin button

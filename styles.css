@@ -1,45 +1,61 @@
-#slot-machine {
-    width: 500px;
-    height: 250px;
-    margin: 0 auto;
-    position: relative;
-    border: 2px solid black;
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.slot-machine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 400px;
+  background-color: #ddd;
+  border: 10px solid #aaa;
+  border-radius: 10px;
+}
   
-  .slot {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border: 2px solid black;
-  }
+.reels {
+  display: flex;
+  justify-self: center;
+  margin-bottom: 20px;
+}
   
-  #slot1 {
-    left: 10%;
-  }
-  
-  #slot2 {
-    left: 35%;
-  }
-  
-  #slot3 {
-    left: 60%;
-  }
-  
-  #spin-button {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 24px;
-    padding: 10px;
-  }
-  
-  #coin-count {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 24px;
-    padding: 10px;
-  }
+ .reel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 200px;
+  background-color: #fff;
+  border: 5px solid #aaa;
+  border-radius: 5px;
+  margin-right: 10px;
+  overflow: hidden;
+ }
+
+ .controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+ }
+
+ #spin-button {
+  background-color: #f00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+ }
+
+ #coin-count {
+  font-size: 20px;
+ }
