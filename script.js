@@ -26,16 +26,16 @@ const coinCount = document.getElementById("coin-count");
 function spin() {
   // Play the spin sound
   audio.spin.play();
-  
+
   // Disable the spin button
   spinButton.disabled = true;
-  
+
   // Decrement the number of coins
   coins--;
-  
+
   // Update the coin count display
   coinCount.innerText = `Coins: ${coins}`;
-  
+
   // Generate random values for each reel
   const reelValues = [];
   for (let i = 0; i < reels.length; i++) {
@@ -43,7 +43,7 @@ function spin() {
     const randomImage = images[randomIndex];
     reelValues.push(randomImage);
   }
-  
+
   // Animate reels
   animateReels(reelValues);
 }
@@ -51,30 +51,35 @@ function spin() {
 // Define the function to animate reels
 function animateReels(reelValues) {
   let reelsFinished = 0; // keep track of how many reels have finished spinning
-  
+
   reels.forEach((reel, index) => {
-    reel.style.backgroundImage = `url(${reelValues[index]})`;
-    reel.style.backgroundPositionY = "0%";
-    
     const targetPosition = 100;
     let currentPosition = 0;
-    
+    const numSteps = 60; // number of animation steps
+    const stepDuration = 50; // duration of each step in milliseconds
+    const totalDuration = numSteps * stepDuration; // total duration of the animation
+
     const animationInterval = setInterval(() => {
-      currentPosition += 10;
+      currentPosition += targetPosition / numSteps; // step size
       reel.style.backgroundPositionY = `${currentPosition}%`;
-      
+
       if (currentPosition >= targetPosition) {
         clearInterval(animationInterval);
         reel.style.backgroundPositionY = "0%";
         reelsFinished++; // increment the count of finished reels
-        
+
         if (reelsFinished === reels.length) {
           setTimeout(() => {
             checkWinCondition(reelValues);
-          }, 500); // Delay the display of results for 500 milliseconds
+          }, 1000); // Delay the display of results for 1 second
         }
+      } else {
+        // Generate random values for each step until the target position is reached
+        const randomIndex = Math.floor(Math.random() * images.length);
+        const randomImage = images[randomIndex];
+        reel.style.backgroundImage = `url(${randomImage})`;
       }
-    }, 50);
+    }, stepDuration);
   });
 }
 
