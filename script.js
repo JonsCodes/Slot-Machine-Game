@@ -21,6 +21,7 @@ let coins = 100;
 const reels = document.querySelectorAll(".reel");
 const spinButton = document.getElementById("spin-button");
 const coinCount = document.getElementById("coin-count");
+const resultMessage = document.getElementById("result-message");
 
 // Define the function for spin
 function spin() {
@@ -70,8 +71,9 @@ function animateReels(reelValues) {
 
         if (reelsFinished === reels.length) {
           setTimeout(() => {
-            checkWinCondition(reelValues);
-          }, 1000); // Delay the display of results for 1 second
+            const finalReelValues = Array.from(reels).map(reel => reel.style.backgroundImage);
+            checkWinCondition(finalReelValues);
+          }, 500); // Delay the win condition check for 500 milliseconds
         }
       } else {
         // Generate random values for each step until the target position is reached
@@ -91,10 +93,10 @@ function checkWinCondition(reelValues) {
     coins += 10;
     coinCount.innerText = `Coins: ${coins}`;
     audio.win.play();
-    alert("Congratulations! You won 10 coins!");
+    resultMessage.innerText = "Congratulations! You won 10 coins!";
   } else {
     audio.lose.play();
-    alert("You lose! Try again!");
+    resultMessage.innerText = "You lose! Try again!";
   }
 
   // Enable spin button

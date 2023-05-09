@@ -17,11 +17,14 @@ If they select restart it will, restart the game.
 ### MVP Criteria
 
 - One thing my game must do to meet my minimum standard.
+- Create a box/slot machine template
+- Create 3 reels
+- Create a spin button with a coins counter
+- Display win or loss message under spin button
 - Game must be functional.
 
 ### Post-MVP Plans
 
-- Store High Score, if they restart the game.
 - Add sound effects and background music.
 - Be able to share highscore, with the option for the person to try the game.
 
@@ -38,3 +41,4 @@ If they select restart it will, restart the game.
 
 ## Source
 - Audio Source: https://mixkit.co/free-sound-effects/slot-machine/
+- Art work Source: https://opengameart.org/content/slot-machine-resource-pack

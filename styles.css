@@ -57,8 +57,39 @@
   font-size: 20px;
   cursor: pointer;
   margin-right: 10px;
- }
+  width: 160px; /* Set a fixed width */
+  text-align: center; /* Center the text horizontally */
+}
 
  #coin-count {
   font-size: 20px;
+  width: 100px; /* Set a fixed width */
+  text-align: center; /* Center the text horizontally */
  }
+
+ #result-message {
+  margin-top: 100px;
+  padding: 10px 20px; /* Add padding to create a box */
+  background-color: #ddd; /* Same background color as slot-machine */
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.instruction-box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.instruction-box h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.instruction-box p {
+  margin-bottom: 5px;
+}
