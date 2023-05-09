@@ -1,9 +1,14 @@
 .container {
+  background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+h1 {
+  color: #aaa;
 }
 
 .slot-machine {
@@ -80,7 +85,7 @@
   position: absolute;
   top: 20px;
   left: 20px;
-  background-color: #f8f8f8;
+  background-color: gray;
   border: 1px solid #ccc;
   padding: 20px;
 }
