@@ -44,4 +44,4 @@ If they select restart it will, restart the game.
 - Audio Source: https://mixkit.co/free-sound-effects/slot-machine/ (Titles: Payout Award, Coins Handling,  Arcade slot machine wheel)
 - Art work Source: https://opengameart.org/content/slot-machine-resource-pack
 - Localstorage: https://www.w3schools.com/jsref/prop_win_localstorage.asp
-- Background image: Photo by https://unsplash.com/@eminor?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+- Background image: Photo by https://unsplash.com/@eminor?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText - Photo by erica minor on Unsplash
