@@ -36,8 +36,8 @@ If they select restart it will, restart the game.
 | Mon. 5/01 | Create GitHub repository. Complete README.md. |
 | Tue. 5/03 | Create HTML, CSS, JS file's     |
 | Wed. 5/06 | Add aduio to game     |
-| Thur. 5/08 | Test game and fix issues   |
-| Fri. 5/10 |  Test Game and fix any issues left, added any Post-MVP   |
+| Mon. 5/08 | Test game and fix issues   |
+| Wed. 5/10 |  Test Game and fix any issues left, added any Post-MVP   |
 | Sat. 5/13 | Deploy to GitHub Pages. Submit completed project. Project presentations. |
 
 ## Source
