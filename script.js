@@ -1,10 +1,10 @@
 // Define the images for the slot machine
 const images = [
-  "assets/cherries.png",
-  "assets/clover.png",
-  "assets/lemon.png",
-  "assets/melon.png",
-  "assets/bell.png"
+  "assets/images/cherries.png",
+  "assets/images/clover.png",
+  "assets/images/lemon.png",
+  "assets/images/melon.png",
+  "assets/images/bell.png"
 ];
 
 // Define the audio clips for the slot machine
@@ -15,7 +15,8 @@ const audio = {
 };
 
 // Set the initial number of coins
-let coins = 100;
+// source: https://www.w3schools.com/jsref/prop_win_localstorage.asp
+let coins = localStorage.getItem("coins") || 100;
 
 // Get the elements for the slot machine
 const reels = document.querySelectorAll(".reel");
@@ -36,6 +37,9 @@ function spin() {
 
   // Update the coin count display
   coinCount.innerText = `Coins: ${coins}`;
+
+  // Store the updated number of coins in local storage
+  localStorage.setItem("coins", coins)
 
   // Generate random values for each reel
   const reelValues = [];

@@ -27,6 +27,7 @@ If they select restart it will, restart the game.
 
 - Add sound effects and background music.
 - Be able to share highscore, with the option for the person to try the game.
+- Store user coins even after a reload. 
 
 ## Project Planning
 
@@ -40,5 +41,7 @@ If they select restart it will, restart the game.
 | Sat. 5/13 | Deploy to GitHub Pages. Submit completed project. Project presentations. |
 
 ## Source
-- Audio Source: https://mixkit.co/free-sound-effects/slot-machine/
+- Audio Source: https://mixkit.co/free-sound-effects/slot-machine/ (Titles: Payout Award, Coins Handling,  Arcade slot machine wheel)
 - Art work Source: https://opengameart.org/content/slot-machine-resource-pack
+- Localstorage: https://www.w3schools.com/jsref/prop_win_localstorage.asp
+- Background image: Photo by https://unsplash.com/@eminor?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
